@@ -39,16 +39,16 @@ This repository now has three distinct responsibilities, and they should be read
 - repository root + `ruleset/`: stable public endpoints for existing GitHub Raw imports and compatibility consumers
 - `tools/`: repository-wide support tooling for recovery, validation, deployment, and maintenance utilities
 
-The root may still look flatter than ideal because some filenames now function like published API paths. Moving them carelessly would break downstream configurations. See [`REPOSITORY_LAYOUT.md`](/Users/kinglee/Documents/Projects/surgemac/REPOSITORY_LAYOUT.md) for the maintenance boundary and placement rules.
+The root may still look flatter than ideal because some filenames now function like published API paths. Moving them carelessly would break downstream configurations. See [`REPOSITORY_LAYOUT.md`](./REPOSITORY_LAYOUT.md) for the maintenance boundary and placement rules.
 
 ## 2026 Recommendation
 
 For new setups, use `neorulset26/` first.
 
-- Architecture reference: [`neorulset26/ENGINEERING_GUIDE.md`](/Users/kinglee/Documents/Projects/surgemac/neorulset26/ENGINEERING_GUIDE.md)
-- Rule URL reference: [`neorulset26/RULESET_URLS.md`](/Users/kinglee/Documents/Projects/surgemac/neorulset26/RULESET_URLS.md)
-- Collaboration and transition notes: [`COLLABORATION_GUIDE.md`](/Users/kinglee/Documents/Projects/surgemac/COLLABORATION_GUIDE.md)
-- Repository tools overview: [`tools/README.md`](/Users/kinglee/Documents/Projects/surgemac/tools/README.md)
+- Architecture reference: [`neorulset26/ENGINEERING_GUIDE.md`](./neorulset26/ENGINEERING_GUIDE.md)
+- Rule URL reference: [`neorulset26/RULESET_URLS.md`](./neorulset26/RULESET_URLS.md)
+- Collaboration and transition notes: [`COLLABORATION_GUIDE.md`](./COLLABORATION_GUIDE.md)
+- Repository tools overview: [`tools/README.md`](./tools/README.md)
 
 Root-level `*.list`, `*.sgmodule`, and `ruleset/` remain available for compatibility, but they should be treated as legacy transition surfaces rather than the preferred 2026 architecture.
 
@@ -68,8 +68,8 @@ The repository is maintained around a few practical rules:
 ### April 1, 2026 09:30 PM PDT — Repository Expansion: Tools Track and DoH Fallback Worker
 
 - **Repository direction**: formalized `tools/` as a parallel support layer alongside the 2026 ruleset mainline and the compatibility publication surface.
-- **Tools**: added repository-level tools documentation at [`tools/README.md`](/Users/kinglee/Documents/Projects/surgemac/tools/README.md).
-- **DoH fallback**: added the first operational utility under `tools/` at [`tools/doh-fallback-worker/README.md`](/Users/kinglee/Documents/Projects/surgemac/tools/doh-fallback-worker/README.md), documenting a Cloudflare Worker based fallback DoH reverse proxy.
+- **Tools**: added repository-level tools documentation at [`tools/README.md`](./tools/README.md).
+- **DoH fallback**: added the first operational utility under `tools/` at [`tools/doh-fallback-worker/README.md`](./tools/doh-fallback-worker/README.md), documenting a Cloudflare Worker based fallback DoH reverse proxy.
 - **Documentation**: refreshed the root README structure to better reflect the project's current shape and maintenance direction.
 
 ### March 27, 2026 08:49 PM PDT — 2026 Mainline Transition Guidance
@@ -96,8 +96,8 @@ The repository is maintained around a few practical rules:
 
 `tools/` is the repository-wide support layer for operational utilities and maintenance-focused components. It exists to hold modules that help run, validate, deploy, recover, or support the broader project without mixing those concerns into the ruleset mainline.
 
-- Tools overview: [`tools/README.md`](/Users/kinglee/Documents/Projects/surgemac/tools/README.md)
-- Current tool: [`tools/doh-fallback-worker/README.md`](/Users/kinglee/Documents/Projects/surgemac/tools/doh-fallback-worker/README.md)
+- Tools overview: [`tools/README.md`](./tools/README.md)
+- Current tool: [`tools/doh-fallback-worker/README.md`](./tools/doh-fallback-worker/README.md)
 
 Current direction for `tools/` includes:
 
@@ -244,7 +244,7 @@ Americas Node → Geographic identity: North/South America
 
 ## 🚀 Quick Start Guide
 
-For new setups, start with the `neorulset26/` documentation above. If you are maintaining an existing profile that already imports root-level raw files, those compatibility paths remain available. If you need an emergency network utility rather than a ruleset, start from the [`tools/` overview](/Users/kinglee/Documents/Projects/surgemac/tools/README.md).
+For new setups, start with the `neorulset26/` documentation above. If you are maintaining an existing profile that already imports root-level raw files, those compatibility paths remain available. If you need an emergency network utility rather than a ruleset, start from the [`tools/` overview](./tools/README.md).
 
 ### Installation Steps
 
