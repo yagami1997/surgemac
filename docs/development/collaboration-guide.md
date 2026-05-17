@@ -14,14 +14,10 @@ This repository now follows a simple placement model.
 - Do not add new `*.list` files to the repository root.
 - Do not add new `.sgmodule` files to the repository root.
 - Do not put migration notes, drafts, or one-off explanations in the repository root.
-- Do not add new tracked files under `archive/legacy/` unless the work is explicitly about legacy retirement or documentation.
 
 ## Legacy Handling
 
-- `archive/legacy/` exists only for transition.
-- It is deprecated and scheduled for removal on `2027-01-31`.
-- If a legacy path still matters, document the replacement path in `archive/legacy/MIGRATION_RULE_URLS.md`.
-- Prefer moving users to `neorulset26/` rather than extending the legacy surface.
+The former `archive/legacy/` transition surface was fully removed on May 16, 2026 (PDT). `neorulset26/` is now the only rule mainline; do not reintroduce legacy paths or mirror retired rule files back into the repository.
 
 ## Sensitive Local Assets
 

@@ -68,7 +68,6 @@ Its main purpose is not:
 - `modules/`: shared compatibility modules such as `*.sgmodule`
 - `tools/`: reference operational utilities and self-hosted support components
 - `docs/`: legal, development, migration, and repository documentation
-- `archive/legacy/`: temporary compatibility archive for historical publication paths
 
 Current top-level layout:
 
@@ -77,8 +76,7 @@ Current top-level layout:
 ├── neorulset26/        # active configuration mainline
 ├── tools/              # reference operational helpers
 ├── modules/            # compatibility modules
-├── docs/               # legal and project documentation
-└── archive/legacy/     # migration-only historical material
+└── docs/               # legal and project documentation
 ```
 
 The repository root is intentionally kept as an entry surface. Project policy, legal boundaries, and long-form references should live under `docs/` rather than accumulating as loose root documents.
@@ -116,9 +114,9 @@ If you are trying to understand the project, start with the design and structure
 
 ### If you follow historical publication paths
 
-- Review [`archive/legacy/MIGRATION_RULE_URLS.md`](./archive/legacy/MIGRATION_RULE_URLS.md)
-- Treat `archive/legacy/` as a temporary migration surface only
-- Prefer moving toward `neorulset26/` references where applicable
+- The former `archive/legacy/` transition surface has been fully removed.
+- Map any retired path to its current equivalent via [`neorulset26/MIGRATION_RULE_URLS.md`](./neorulset26/MIGRATION_RULE_URLS.md) and switch downstream consumers to [`neorulset26/RULESET_URLS.md`](./neorulset26/RULESET_URLS.md).
+- Requests against old `archive/legacy/...` paths will return 404 and will not be restored.
 
 ### If you are reviewing compatibility modules
 
@@ -165,7 +163,6 @@ Additional structured materials live under:
 
 - `neorulset26/ruleset/`
 - `neorulset26/ruleset/Media/`
-- `archive/legacy/` for historical migration context
 
 These files are published as text artifacts for study, comparison, maintenance, and compatibility review. They should not be read as operational promises or endorsements regarding any third-party service, territory, platform policy, or enforcement posture.
 
@@ -198,14 +195,21 @@ If you are operating in a regulated environment, under enterprise security contr
 
 ## Changelog
 
-### Latest: April 14, 2026
+### Latest: May 16, 2026
+
+- Fully retired and removed the `archive/legacy/` directory, including all historical root rules, the old `ruleset/` tree, and the legacy `MIGRATION_RULE_URLS.md` mirror.
+- Reason: the migration window that justified keeping a legacy mirror has closed. `neorulset26/` is the only maintained mainline; preserving a parallel legacy surface caused path ambiguity, duplicated maintenance, and gave new users the false impression that retired publication paths were still supported.
+- Reality: any downstream still pointing at `archive/legacy/...` URLs will now receive 404 responses and must switch to the equivalents listed in [`neorulset26/RULESET_URLS.md`](./neorulset26/RULESET_URLS.md), using [`neorulset26/MIGRATION_RULE_URLS.md`](./neorulset26/MIGRATION_RULE_URLS.md) for path mapping. Legacy path compatibility is no longer provided and will not be restored.
+- Updated `README.md`, `docs/development/repository-layout.md`, `docs/development/collaboration-guide.md`, and `docs/reference/rules.md` to remove all references to the retired archive surface.
+
+<details>
+<summary><strong>Previous repository milestones</strong></summary>
+
+### April 14, 2026
 
 - Established `docs/legal/LEGAL.md` with full jurisdictional compliance notice, trademark acknowledgment, and liability disclaimer.
 - Restructured project documentation to reflect research and configuration architecture scope.
 - Revised `ENGINEERING_GUIDE.md` and `RULESET_URLS.md` to align with project positioning.
-
-<details>
-<summary><strong>Previous repository milestones</strong></summary>
 
 ### April 8, 2026
 
@@ -259,6 +263,6 @@ The best engineering mood is steady attention: keep the tools honest, keep the a
     <br><br>
     <sub>Copyright © 2023-2026 YAGAMI</sub>
     <br>
-    <sub>Last updated: April 27, 2026 at 11:53 PM PDT</sub>
+    <sub>Last updated: May 16, 2026 at 5:45 PM PDT</sub>
   </p>
 </div>

@@ -12,8 +12,6 @@ This repository was refactored to reduce the root surface and make ownership exp
   Shared Surge modules. All `.sgmodule` files belong here.
 - `docs/`
   Development, usage, migration, and reference documents.
-- `archive/legacy/`
-  Temporary archive for historical root rules and the old `ruleset/` tree.
 - `openclash-archive/`
   Local-only sensitive OpenClash rewrite files. This directory is ignored by Git.
 
@@ -24,18 +22,10 @@ This repository was refactored to reduce the root surface and make ownership exp
 - New modules belong in `modules/`.
 - New repository documentation belongs in `docs/`.
 - Do not add new business files to the repository root.
-- Do not treat `archive/legacy/` as a live publication surface.
 
 ## Legacy Policy
 
-The former root `*.list` files and the old `ruleset/` tree are no longer part of the preferred structure.
-
-- They were moved into `archive/legacy/`.
-- They remain only for transition and inspection.
-- They are scheduled for removal on `2027-01-31`.
-- Removal work may begin on `2027-02-01`.
-
-Use [`MIGRATION_RULE_URLS.md`](../../archive/legacy/MIGRATION_RULE_URLS.md) to map old URLs to the 2026 mainline where possible.
+The former root `*.list` files and the old `ruleset/` tree are no longer part of the repository. They were retired from the `archive/legacy/` transition surface and fully removed on May 16, 2026 (PDT). Use `neorulset26/` for all rule references; historical publication paths are no longer mirrored in this repository.
 
 ## Root Directory Policy
 

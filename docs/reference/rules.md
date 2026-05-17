@@ -14,20 +14,15 @@ Primary references:
 
 ## Legacy Rules
 
-Historical root rules and the old `ruleset/` tree were moved to `archive/legacy/`.
-
-- Status: deprecated
-- Removal date: `2027-01-31`
-- Migration reference: `archive/legacy/MIGRATION_RULE_URLS.md`
+The former `archive/legacy/` transition surface (historical root rules and the old `ruleset/` tree) was fully removed on May 16, 2026 (PDT). Historical publication paths are no longer mirrored in this repository.
 
 ## Current Rule Ownership
 
 - Active maintained rules: `neorulset26/`
-- Transition-only historical rules: `archive/legacy/`
 - Local-only sensitive OpenClash rewrite files: `openclash-archive/` (not tracked by Git)
 
 ## Guidance
 
 - For reviewing the active configuration mainline, refer to `neorulset26/`.
-- For historical path references, consult the legacy migration document first.
 - Do not add new published configuration artifacts to the repository root.
+- Do not reintroduce a legacy mirror; downstream consumers should migrate to paths listed in `neorulset26/RULESET_URLS.md`.
